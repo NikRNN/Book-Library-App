@@ -9,6 +9,7 @@ const BookList = () => {
 
   const deleteHandler = (id) => {
     const deletedBook = books.find((book) => book.id === id);
+    console.log(deletedBook);
     dispatch(deleteBook(deletedBook));
   };
 
