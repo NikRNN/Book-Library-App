@@ -7,6 +7,7 @@ import "./BookList.css";
 
 const BookList = () => {
   const books = useSelector((state) => state.books);
+  const titleFilter = useSelector((state) => state.filter.title);
   const dispatch = useDispatch();
 
   const deleteHandler = (id) => {
@@ -23,6 +24,13 @@ const BookList = () => {
     dispatch(toggleFavorite(favoriteBook));
   };
 
+  const filteredBooks = books.filter((book) => {
+    const matchesTitle = book.title
+      .toLowerCase()
+      .includes(titleFilter.toLowerCase());
+    return matchesTitle;
+  });
+
   return (
     <div className="app-block book-list">
       <h2>Список книг</h2>
@@ -30,7 +38,7 @@ const BookList = () => {
         "Нет доступных книг"
       ) : (
         <ul>
-          {books.map((book, i) => (
+          {filteredBooks.map((book, i) => (
             <li key={book.id}>
               <div className="book-info">
                 {++i}. {book.title} by {book.author}
