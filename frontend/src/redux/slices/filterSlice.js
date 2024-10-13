@@ -11,11 +11,12 @@ const filterSlice = createSlice({
     setFilterTitle: (state, action) => {
       return { ...state, title: action.payload };
     },
+    resetFilters: (state) => {
+      return initialState;
+    },
   },
 });
 
-export const { setFilterTitle } = filterSlice.actions;
-console.log(filterSlice.actions.setFilterTitle("123"));
+export const { setFilterTitle, resetFilters } = filterSlice.actions;
 
 export default filterSlice.reducer;
-console.log(filterSlice);
