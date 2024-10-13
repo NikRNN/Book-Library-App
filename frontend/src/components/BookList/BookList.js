@@ -8,6 +8,7 @@ import "./BookList.css";
 const BookList = () => {
   const books = useSelector((state) => state.books);
   const titleFilter = useSelector((state) => state.filter.title);
+  const authorFilter = useSelector((state) => state.filter.author);
   const dispatch = useDispatch();
 
   const deleteHandler = (id) => {
@@ -28,7 +29,11 @@ const BookList = () => {
     const matchesTitle = book.title
       .toLowerCase()
       .includes(titleFilter.toLowerCase());
-    return matchesTitle;
+
+    const matchesAuthor = book.author
+      .toLowerCase()
+      .includes(authorFilter.toLowerCase());
+    return matchesAuthor && matchesTitle;
   });
 
   return (
