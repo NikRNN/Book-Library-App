@@ -26,8 +26,8 @@ const Filter = () => {
     dispatch(resetFilters());
   };
 
-  const handleFilterFavoriteBook = () => {
-    dispatch(setFavoriteFilter());
+  const handleFilterFavoriteBook = (e) => {
+    dispatch(setFavoriteFilter(e.target.value));
   };
 
   return (

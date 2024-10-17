@@ -9,7 +9,7 @@ const BookList = () => {
   const titleFilter = useSelector((state) => state.filter.title);
   const authorFilter = useSelector((state) => state.filter.author);
   const favoriteFilter = useSelector((state) => state.filter.favorite);
-  console.log(favoriteFilter);
+
   const dispatch = useDispatch();
 
   const deleteHandler = (id) => {
@@ -40,6 +40,24 @@ const BookList = () => {
     return matchesAuthor && matchesTitle && matchesFavorite;
   });
 
+  const highlightMatch = (text, filter) => {
+    if (!filter) {
+      return text;
+    }
+    const regex = new RegExp(`(${filter})`, "gi");
+
+    return text.split(regex).map((item, index) => {
+      if (item.toLowerCase() === filter.toLowerCase()) {
+        return (
+          <span key={index} className="highlight">
+            {item}
+          </span>
+        );
+      }
+      return item;
+    });
+  };
+
   return (
     <div className="app-block book-list">
       <h2>Список книг</h2>
@@ -50,7 +68,8 @@ const BookList = () => {
           {filteredBooks.map((book, i) => (
             <li key={book.id}>
               <div className="book-info">
-                {++i}. {book.title} by {book.author}
+                {++i}. {highlightMatch(book.title, titleFilter)} by{" "}
+                {highlightMatch(book.author, authorFilter)}
               </div>
 
               {book.isFavorite ? (

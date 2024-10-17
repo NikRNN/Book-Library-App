@@ -16,8 +16,8 @@ const filterSlice = createSlice({
     resetFilters: () => {
       return initialState;
     },
-    setFavoriteFilter: (state) => {
-      state.favorite = !state.favorite;
+    setFavoriteFilter: (state, action) => {
+      return { ...state, favorite: action.payload };
     },
     setFilterAuthor: (state, action) => {
       return { ...state, author: action.payload };
