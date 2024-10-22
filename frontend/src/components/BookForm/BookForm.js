@@ -20,7 +20,7 @@ const BookForm = () => {
     dispatch(addBook(finallyRandomBook));
   };
 
-  const handleAddRandomBookViaApi = async () => {
+  const handleAddRandomBookViaApi = () => {
     dispatch(thunkFunction());
   };
 
