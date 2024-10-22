@@ -70,7 +70,7 @@ const BookList = () => {
             <li key={book.id}>
               <div className="book-info">
                 {++i}. {highlightMatch(book.title, titleFilter)} by{" "}
-                {highlightMatch(book.author, authorFilter)}
+                {highlightMatch(book.author, authorFilter)} ({book.source})
               </div>
 
               {book.isFavorite ? (
