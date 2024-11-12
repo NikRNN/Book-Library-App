@@ -13,6 +13,14 @@ app.get("/random-book", (req, res) => {
   res.json(randomBook);
 });
 
+app.get("/random-book-delayed", (req, res) => {
+  const randomIndex = Math.floor(Math.random() * bookData.length);
+  const randomBook = bookData[randomIndex];
+  setTimeout(() => {
+    return res.json(randomBook);
+  }, 3000);
+});
+
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
