@@ -5,7 +5,8 @@ import { BsBookmarkStar, BsBookmarkStarFill } from "react-icons/bs";
 import "./BookList.css";
 
 const BookList = () => {
-  const books = useSelector((state) => state.books);
+  const books = useSelector((state) => state.books.books);
+
   const titleFilter = useSelector((state) => state.filter.title);
   const authorFilter = useSelector((state) => state.filter.author);
   const favoriteFilter = useSelector((state) => state.filter.favorite);
