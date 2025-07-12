@@ -38,8 +38,8 @@
 # Book library app (Vite + React + Redux)
 
 ![Интерфейс приложения](./screenshots/screenshots1.png)
-![Интерфейс приложения](./screenshots/screenshots2.png.png)
-![Интерфейс приложения](./screenshots/screenshots3.png.png)
+![Интерфейс приложения](./screenshots/screenshots2.png)
+![Интерфейс приложения](./screenshots/screenshots3.png)
 
 ## О проекте
 
