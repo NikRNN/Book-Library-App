@@ -3,33 +3,34 @@
 **Основные каталоги:**
 
 ```
-├── book-library-app/
-├── api /
-│   ├── -data/
-│   ├── -index.js
-│   ├── -package-lock.json
-│   └── -package.json
-├── frontend/
-│   ├── -public/
-│   ├── -src/
-│   │   ├── assest/
-│   │   ├── components/
-│   │   ├── -data/
-│   │   ├── -redux/
-│   │   ├── -utils/
-│   │   ├── App.css
-│   │   ├── App.jsx
-│   │   ├── index.css
-│   │   └── main.jsx
-│   ├── eslint.condig.js
-│   ├── package-lock.json
-│   ├── package.json
-│   └── .gitignore
-├── index.html
-├── README.md
-├── vite.config.js
-└── screenshots
-
+.
+└── api /
+    ├── data/
+    ├── index.js
+    ├── package-lock.json
+    ├── package.json
+    ├── frontend/
+    │   ├── public/
+    │   ├── src/
+    │   │   ├── assest/
+    │   │   ├── components/
+    │   │   ├── data/
+    │   │   ├── redux/
+    │   │   ├── utils/
+    │   │   ├── App.css
+    │   │   ├── App.jsx
+    │   │   ├── index.css
+    │   │   └── main.jsx
+    │   ├── eslint.condig.js
+    │   ├── package-lock.json
+    │   └── package.json
+    ├── screenshots/
+    ├── index.html
+    ├── README.md
+    ├── vite.config.js
+    ├── .gitignore
+    ├── package-lock.json
+    └── package.json
 
 ```
 
