@@ -49,10 +49,13 @@ Book Library App — приложение для отображения и фи�
 
 ## Технологии
 
-- Vite 7
-- React 19 (функциональные компонента)
+- Vite
+- React (функциональные компоненты, react-dom, react-icons, react-toastify)
+- Redux
 - CSS
+- uuid
 - axios
+- eslint (eslint-plugin-react-hooks, eslint-plugin-react-refresh)
 
 ## Установка и запуск
 
