@@ -51,7 +51,7 @@ Book Library App — приложение для отображения и фи�
 
 - Vite
 - React (функциональные компоненты, react-dom, react-icons, react-toastify)
-- Redux
+- Redux (Redux Toolkit)
 - CSS
 - uuid
 - axios
